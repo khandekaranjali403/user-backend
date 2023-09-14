@@ -26,7 +26,17 @@ public class UserController {
 
 	@Autowired
 	UserRepository userrepo;
-
+	
+	
+	@RequestMapping("open")
+	String UserDetails()
+	{
+		return "Hello   ,    I am Anjali khandekar :  ";
+	}
+	
+	
+	
+	
 	@PostMapping("/login")
 	ResponseEntity<?> loginUser(@RequestBody User userdata) {
 		System.out.println(userdata);
